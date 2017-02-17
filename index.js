@@ -17,11 +17,9 @@ app.get(/.*/, (req, res) => {
 					imgToAscii(src, {
 						colored: false, 
 						reverse: true,
-						size_options: {
-							screen_size: {
-								width: 50,
-								height: 50
-							}
+						size: {
+							width: 40,
+							height: 80
 						}
 					}, (err, converted)=>{
 						err ? reject(err) : resolve(converted)
