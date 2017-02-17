@@ -38,6 +38,8 @@ app.get(/.*/, (req, res) => {
 
 })
 
-app.listen(8000, () => {
-	console.log("super-important stuff up at localhost:8000")
+var port = process.env.PORT || 8000
+
+app.listen(port, () => {
+	console.log("super-important stuff up on port " + port)
 })
